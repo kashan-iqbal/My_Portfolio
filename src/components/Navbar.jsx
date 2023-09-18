@@ -23,7 +23,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} className="w-9 h-9 object-contain" alt="go" />
+          <img src={logo} className="w-18 h-12 object-contain" alt="go" />
           <p className="text-white text-[18px] font-bold cursor-pointer ">
             Kashan <br/><span className=''>| MERN Stack Developer </span>
           </p>
