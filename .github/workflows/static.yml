@@ -1,0 +1,72 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes tarfrom odoo import models, tools
+from odoo.exceptions import UserError
+from odoo.http import request
+from ...utils.magento.rest import Client
+
+
+class StockInventory(models.Model):
+    _inherit = 'stock.inventory'
+
+    def action_validate(self):
+        super(StockInventory, self).action_validate()
+        magento_backend = request.env['magento.backend'].search([], limit=1)
+        for e in self.line_ids:
+            if e.location_id.usage == 'internal' and e.location_id.is_magento_source and e.product_id.on_magento == True:
+                try:
+                    params = {
+                        "sourceItems": [
+                            {
+                                "sku": e.product_id.default_code,
+                                "source_code": "odoo_location_" + str(e.location_id.id),
+                                "quantity": e.product_qty,
+                                "status": 1
+                            }
+                        ]
+                    }
+                    client = Client(magento_backend.web_url, magento_backend.access_token, True)
+                    client.post('rest/V1/inventory/source-items', arguments=params)
+                except Exception as a:
+                    raise UserError(('Can not update quantity product on source magento - %s') % tools.ustr(a))
+geting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
