@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { styles } from "../style.js";
-import { logo, menu ,close } from "../assets";
+import { logo, menu, close } from "../assets";
 import { navLinks } from "../constant/index.js";
-
-
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -24,8 +22,9 @@ const Navbar = () => {
           }}
         >
           <img src={logo} className="w-18 h-12 object-contain" alt="go" />
-          <p className="text-white text-[18px] font-bold cursor-pointer ">
-            Kashan <br/><span className=''>| MERN Stack Developer </span>
+          <p className="text-white text-[19px] font-bold cursor-pointer ">
+            Kashan <br />
+            <span className="">| MERN Stack Developer </span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -43,7 +42,7 @@ const Navbar = () => {
             );
           })}
         </ul>
-    
+
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -51,35 +50,34 @@ const Navbar = () => {
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`  } >
-          <ul className="list-none  flex  justify-end items-start flex-col gap-4 ">
-          {navLinks.map((opt) => {
-            return (
-              <li
-                key={opt.id}
-                className={`${
-                  active === opt.title ? "text-white" : "text-secondary"
-                } hover:font-poppins font-medium cursor-pointer text-[16px]`}
-                onClick={() => {
-                  setToggle(!toggle)
-                setActive(opt.title)}
-                }
-              >
-                <a href={`#${opt.id}`}>{opt.title}</a>
-              </li>
-            );
-          })}
-        </ul>
-    
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none  flex  justify-end items-start flex-col gap-4 ">
+              {navLinks.map((opt) => {
+                return (
+                  <li
+                    key={opt.id}
+                    className={`${
+                      active === opt.title ? "text-white" : "text-secondary"
+                    } hover:font-poppins font-medium cursor-pointer text-[16px]`}
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(opt.title);
+                    }}
+                  >
+                    <a href={`#${opt.id}`}>{opt.title}</a>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>
     </nav>
-  
   );
 };
 
 export default Navbar;
-
-
-
