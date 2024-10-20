@@ -15,48 +15,49 @@ const Contact = () => {
     message: "",
   });
 
-
   // template_364j9c3
-// service_qe5vimc
-// 7zhUPhwke-KkgwW0t
-
-
+  // service_qe5vimc
+  // 7zhUPhwke-KkgwW0t
 
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
-    const {name , value} =e.target
-    setForm({...form,[name]:value})
-  }
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setLoading(true)
-    emailjs.send("service_qe5vimc",
-    "template_364j9c3",
-    {
-      form_name:form.name,
-      to_name: 'KASHAN',
-      form_email:'kashaniqbal33@gmail.com',
-      email:form.email,
-      message:form.message
-    },
-"7zhUPhwke-KkgwW0t"
-    )
-    .then(() =>{
-      setLoading(false)
-      alert("Thank you I will get back to as soon as possible")
-      setForm({
-        name:"",
-        email:"",
-        message:""
-      })
-    },(error)=>{
-      setLoading(false)
-      console.log(error);
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .send(
+        "service_qe5vimc",
+        "template_364j9c3",
+        {
+          form_name: form.name,
+          to_name: "KASHAN",
+          form_email: "kashaniqbal33@gmail.com",
+          email: form.email,
+          message: form.message,
+        },
+        "7zhUPhwke-KkgwW0t"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you I will get back to as soon as possible");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
 
-      alert('some thing went wrong')
-    }
-    )
+          alert("some thing went wrong");
+        }
+      );
   };
   return (
     <div className="xl:mt:12 xl:flex-row flex-col-reverse flex gap-10  overflow-hidden">
