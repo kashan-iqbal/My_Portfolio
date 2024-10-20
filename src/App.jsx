@@ -1,4 +1,3 @@
-import React, { lazy } from "react";
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
