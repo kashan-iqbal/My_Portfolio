@@ -1,8 +1,3 @@
 import SectionWrapper from "./SectionWrapper";
 
-
-
-export {SectionWrapper}
-
-
-
+export { SectionWrapper };

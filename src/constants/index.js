@@ -46,7 +46,7 @@ const services = [
     icon: web,
   },
   {
-    title: "JavaScript",
+    title: "React Native Developer",
     icon: mobile,
   },
   {
@@ -54,7 +54,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "React js",
+    title: "Content Creator",
     icon: creator,
   },
 ];
@@ -198,9 +198,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Ecommerce-App",
+    name: "Car Rent",
     description:
-      "Introducing the next-generation eCommerce app! Our cutting-edge platform is designed to revolutionize the online shopping experience. With a user-friendly interface, seamless navigation, and powerful features.",
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
         name: "react",
@@ -211,20 +211,12 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Express",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "ReactBootstrap",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/kashan-iqbal/FULL-STACK-E-COMMERCE",
+    source_code_link: "https://github.com/",
   },
   {
     name: "Job IT",

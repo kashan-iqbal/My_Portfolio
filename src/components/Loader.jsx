@@ -1,53 +1,31 @@
 import { Html, useProgress } from "@react-three/drei";
 
-const Loader = () => {
+const CanvasLoader = () => {
   const { progress } = useProgress();
-
-  console.log(progress);
   return (
-    <Html center>
-      <div className="canvas-load">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          {/* Spinner or any other loading animation */}
-          <div
-            className="spinner"
-            style={{
-              width: 50,
-              height: 50,
-              border: "4px solid #f1f1f1",
-              borderTop: "4px solid #555",
-              borderRadius: "50%",
-              animation: "spin 1s linear infinite",
-            }}
-          ></div>
-
-          <p
-            style={{
-              fontSize: 14,
-              color: "#f1f1f1",
-              fontWeight: 800,
-              marginTop: 40,
-            }}
-          >
-            {progress.toFixed(2)}%
-          </p>
-        </div>
-      </div>
-      {/* Add keyframe for spinner animation */}
-      <style>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-      `}</style>
+    <Html
+      as='div'
+      center
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <span className='canvas-loader'></span>
+      <p
+        style={{
+          fontSize: 14,
+          color: "#F1F1F1",
+          fontWeight: 800,
+          marginTop: 40,
+        }}
+      >
+        {progress.toFixed(2)}%
+      </p>
     </Html>
   );
 };
 
-export default Loader;
+export default CanvasLoader;
