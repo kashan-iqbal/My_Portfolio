@@ -16,13 +16,16 @@ import {
   figma,
   docker,
   meta,
-  starbucks,
   tesla,
   shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  darulSolution,
+  GreensFintech,
+  ShadiTayari,
+  Tamasha,
 } from "../assets";
 
 export const navLinks = [
@@ -46,7 +49,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Next js",
     icon: mobile,
   },
   {
@@ -54,7 +57,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Api Integrations",
     icon: creator,
   },
 ];
@@ -116,11 +119,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Javascript Developer",
+    company_name: "Darul Solutions",
+    icon: darulSolution,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Dec 2022 - Oct 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -129,44 +132,45 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "MERN stack developer",
+    company_name: "Greens Fintech ",
+    icon: GreensFintech,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Oct 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Design, develop, and maintain scalable web applications using the MERN stack.",
+      "Collaborate with cross-functional teams to define, design, and ship new features.",
+      "Write clean, maintainable, and efficient code.",
+      "Troubleshoot and debug applications to ensure optimal performance.",
+      "Stay updated with emerging technologies and best practices in web development.",
     ],
   },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Web Developer",
+  //   company_name: "Shopify",
+  //   icon: shopify,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
@@ -198,9 +202,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Tamasha Web App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Tamasha Web App is an entertainment and live-streaming platform that connects users with a wide range of interactive shows, events, and performances. It provides a dynamic space for audiences to discover, watch, and engage with live content, fostering connections between creators and viewers in real time",
     tags: [
       {
         name: "react",
@@ -215,13 +219,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: Tamasha,
+    source_code_link: "https://tamashaweb.com/",
   },
   {
-    name: "Job IT",
+    name: "Shadi Tayari",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A comprehensive wedding planning platform that connects users with top-tier service providers, including photographers, caterers, decorators, makeup artists, and venues. It simplifies event planning with easy browsing, comparisons, and bookings. Shadi Tayari ensures a seamless experience for creating unforgettable celebrations",
     tags: [
       {
         name: "react",
@@ -236,30 +240,30 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: ShadiTayari,
+    source_code_link: "https://www.shaditayari.pk/",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "Trip Guide",
+  //   description:
+  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: tripguide,
+  //   source_code_link: "https://github.com/",
+  // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
