@@ -25,10 +25,14 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import darulSolution from "./company/darulsolutions_limited_logo.jpg";
+import GreensFintech from "./company/1705126092462.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import Tamasha from "./Screenshot 2024-12-06 120807.png";
+import ShadiTayari from "./Screenshot 2024-12-06 120406.png";
 
 export {
   logo,
@@ -59,4 +63,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  ShadiTayari,
+  Tamasha,
+  darulSolution,
+  GreensFintech,
 };
