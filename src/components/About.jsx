@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
-import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "../HOC";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
@@ -38,6 +38,7 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
+
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
