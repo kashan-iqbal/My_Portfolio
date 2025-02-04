@@ -119,7 +119,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Javascript Developer",
+    title: "Frontend Developer",
     company_name: "Darul Solutions",
     icon: darulSolution,
     iconBg: "#383E56",
