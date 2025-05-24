@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "MERN Stack Developer | Portfolio of Kashan Iqbal",
   description:
     "Senior MERN Stack Developer specializing in full-stack web applications and system design. Available for freelance, remote, and full-time projects in Karachi, Saudi Arabia, and globally.",
+  verification: {
+    google: "DyZ1Ps8WG16wUFFhrXv_hsJXjPci0L5P0YPSyNVgyAc",
+  },
   keywords: [
     "MERN developer Karachi",
     "Full Stack Developer Saudi Arabia",
