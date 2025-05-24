@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const sections = [
   { id: "hero", label: "Home" },
@@ -11,30 +11,30 @@ const sections = [
   { id: "services", label: "Services" },
   { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
-]
+];
 
 export default function FloatingNav() {
-  const [activeSection, setActiveSection] = useState("hero")
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
-        })
+        });
       },
-      { threshold: 0.5 },
-    )
+      { threshold: 0.5 }
+    );
 
     sections.forEach(({ id }) => {
-      const element = document.getElementById(id)
-      if (element) observer.observe(element)
-    })
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <motion.div
@@ -43,11 +43,15 @@ export default function FloatingNav() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 1 }}
     >
-      <div className="flex flex-col gap-3">
+      <section className="flex flex-col gap-3">
         {sections.map(({ id, label }) => (
           <button
             key={id}
-            onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document
+                .getElementById(id)
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
             className="group relative flex items-center"
             aria-label={`Scroll to ${label}`}
           >
@@ -63,8 +67,7 @@ export default function FloatingNav() {
             />
           </button>
         ))}
-      </div>
+      </section>
     </motion.div>
-  )
+  );
 }
-

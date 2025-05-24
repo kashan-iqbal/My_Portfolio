@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
-
-import profileImage from "../../public/963ef819-b3b1-45e9-ae8a-5e9717fdb553.jpg";
+import profileImage from "@/public/profile.jpg";
 
 const CodePattern = () => (
   <svg
@@ -123,9 +122,8 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl transform -rotate-6 opacity-50"></div>
               <div className="">
                 <Image
-                  // src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0812.jpg-jQSxWaycmtpBR7IUnsPV8C8L3vlrQ2.jpeg"
                   src={profileImage}
-                  alt="Usman Zafar"
+                  alt="kashan iqbal"
                   fill
                   className="object-cover relative rounded-2xl overflow-hidden shadow-2xl"
                   priority
