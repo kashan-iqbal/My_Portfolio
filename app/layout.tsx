@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Senior MERN Stack Developer specializing in full-stack web applications and system design. Available for freelance, remote, and full-time projects in Karachi, Saudi Arabia, and globally.",
   verification: {
-    google: "DyZ1Ps8WG16wUFFhrXv_hsJXjPci0L5P0YPSyNVgyAc",
+    google: "y4x_K50P5s-Ztz8ATrrYM6dQjZ5WRKVpjodlg9_2BAU",
   },
   keywords: [
     "MERN developer Karachi",
