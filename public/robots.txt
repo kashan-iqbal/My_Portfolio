@@ -1,9 +1,3 @@
-# *
 User-agent: *
 Allow: /
-
-# Host
-Host: https://yourdomain.com
-
-# Sitemaps
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://kashan-iqbal.netlify.app/sitemap.xml
